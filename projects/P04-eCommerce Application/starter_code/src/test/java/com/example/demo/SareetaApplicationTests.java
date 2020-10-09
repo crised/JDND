@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.splunk.logging.SplunkCimLogEvent;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ import java.util.Random;
 public class SareetaApplicationTests {
 
     @Test
+    @Ignore
     public void createExampleLogSplunkEvents() throws InterruptedException {
         Logger logger = LoggerFactory.getLogger("splunk.logger");
         logger.info("This is a test");

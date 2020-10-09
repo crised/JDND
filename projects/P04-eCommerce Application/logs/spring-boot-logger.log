@@ -1,0 +1,31 @@
+2020-10-09 06:36:44,576 INFO org.springframework.boot.StartupInfoLogger [main] Starting SareetaApplication on thinkpad with PID 45877 (started by crised in /home/crised/IdeaProjects/JDND/projects/P04-eCommerce Application)
+2020-10-09 06:36:44,580 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-10-09 06:36:45,082 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-09 06:36:45,126 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 39ms. Found 4 repository interfaces.
+2020-10-09 06:36:45,485 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$38c82766] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-09 06:36:45,688 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-10-09 06:36:45,701 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-10-09 06:36:45,711 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-10-09 06:36:45,711 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.19]
+2020-10-09 06:36:45,800 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-10-09 06:36:45,800 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1182 ms
+2020-10-09 06:36:45,915 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-10-09 06:36:46,027 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-10-09 06:36:46,065 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-10-09 06:36:46,117 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2020-10-09 06:36:46,118 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-10-09 06:36:46,205 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-10-09 06:36:46,285 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-09 06:36:46,778 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-09 06:36:47,046 INFO com.example.demo.SareetaApplication [main] Created logger!
+2020-10-09 06:36:47,202 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-09 06:36:47,237 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-09 06:36:47,407 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-10-09 06:36:47,418 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-09 06:36:47,419 INFO org.springframework.boot.StartupInfoLogger [main] Started SareetaApplication in 3.177 seconds (JVM running for 3.434)
+2020-10-09 07:31:38,038 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-09 07:31:38,039 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-10-09 07:31:38,044 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 5 ms
+2020-10-09 07:32:31,267 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-3] "name=create_user_success" "event_id=CREATE_USER_SUCCESS"

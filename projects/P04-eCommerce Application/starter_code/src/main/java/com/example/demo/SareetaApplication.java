@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import com.splunk.logging.SplunkCimLogEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -30,6 +32,13 @@ public class SareetaApplication {
         events.add(new SplunkCimLogEvent("order_request_failure", ORDER_REQUEST_FAILURE.toString()));
         events.add(new SplunkCimLogEvent("app_exception", APP_EXCEPTION.toString()));
         return events;
+    }
+
+    @Bean
+    Logger SplunkLogger(){
+        Logger logger = LoggerFactory.getLogger("splunk.logger");
+        logger.info("Created logger!");
+        return logger;
     }
 
 }
