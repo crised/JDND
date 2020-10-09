@@ -42,7 +42,6 @@
     <root level="info">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
-<!--        <appender-ref ref="Socket"/>-->
     </root>
 
 <!--    &lt;!&ndash; LOG "com.baeldung*" at TRACE level &ndash;&gt;-->

@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static com.example.demo.LogTags.*;
@@ -24,18 +25,23 @@ public class SareetaApplication {
     }
 
     @Bean
-    List<SplunkCimLogEvent> appLogEvents() {
-        List<SplunkCimLogEvent> events = new ArrayList<>();
-        events.add(new SplunkCimLogEvent("create_user_success", CREATE_USER_SUCCESS.toString()));
-        events.add(new SplunkCimLogEvent("create_user_failure", CREATE_USER_FAILURE.toString()));
-        events.add(new SplunkCimLogEvent("order_request_success", ORDER_REQUEST_SUCCESS.toString()));
-        events.add(new SplunkCimLogEvent("order_request_failure", ORDER_REQUEST_FAILURE.toString()));
-        events.add(new SplunkCimLogEvent("app_exception", APP_EXCEPTION.toString()));
+    String[] appLogEvents() {
+        String[] events =
+                {new SplunkCimLogEvent("create_user_success",
+                        String.valueOf(CREATE_USER_SUCCESS.ordinal())).toString(),
+                        new SplunkCimLogEvent("create_user_failure",
+                                String.valueOf(CREATE_USER_FAILURE.ordinal())).toString(),
+                        new SplunkCimLogEvent("order_request_success",
+                                String.valueOf(ORDER_REQUEST_SUCCESS.ordinal())).toString(),
+                        new SplunkCimLogEvent("order_request_failure",
+                                String.valueOf(ORDER_REQUEST_FAILURE.ordinal())).toString(),
+                        new SplunkCimLogEvent("app_exception",
+                                String.valueOf(APP_EXCEPTION.ordinal())).toString()};
         return events;
     }
 
     @Bean
-    Logger SplunkLogger(){
+    Logger SplunkLogger() {
         Logger logger = LoggerFactory.getLogger("splunk.logger");
         logger.info("Created logger!");
         return logger;
