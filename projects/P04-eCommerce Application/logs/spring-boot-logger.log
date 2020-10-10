@@ -632,3 +632,7 @@ insert into user (id, cart_id, username) values (null, ?, ?) [23505-199]
 2020-10-09 08:59:13,424 ERROR com.example.demo.controllers.OrderController [http-nio-8080-exec-8] "name=order_request_failure" "event_id=3"
 2020-10-09 08:59:13,918 ERROR com.example.demo.controllers.OrderController [http-nio-8080-exec-9] "name=order_request_failure" "event_id=3"
 2020-10-09 08:59:14,356 ERROR com.example.demo.controllers.OrderController [http-nio-8080-exec-10] "name=order_request_failure" "event_id=3"
+2020-10-09 10:06:50,737 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-09 10:06:50,739 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-09 10:06:50,741 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2020-10-09 10:06:50,743 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.

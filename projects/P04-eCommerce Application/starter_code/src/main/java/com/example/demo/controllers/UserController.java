@@ -1,6 +1,8 @@
 package com.example.demo.controllers;
 
 import static com.example.demo.LogTags.*;
+
+import com.example.demo.AppException;
 import com.example.demo.model.persistence.Cart;
 import com.example.demo.model.persistence.User;
 import com.example.demo.model.persistence.repositories.CartRepository;
@@ -9,6 +11,7 @@ import com.example.demo.model.requests.CreateUserRequest;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -26,6 +29,9 @@ public class UserController {
 
     @Autowired
     private Logger logger;
+
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -50,6 +56,10 @@ public class UserController {
             Cart cart = new Cart();
             cartRepository.save(cart);
             user.setCart(cart);
+            if (createUserRequest.getPassword().length() < 5 ||
+                    !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword()))
+                throw new AppException("User password error");
+            user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
             userRepository.save(user);
             logger.info(logEvents[CREATE_USER_SUCCESS.ordinal()]);
             return ResponseEntity.ok(user);
