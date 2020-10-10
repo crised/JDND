@@ -56,11 +56,15 @@ public class UserController {
             Cart cart = new Cart();
             cartRepository.save(cart);
             user.setCart(cart);
+            System.out.println("here1");
             if (createUserRequest.getPassword().length() < 5 ||
                     !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword()))
                 throw new AppException("User password error");
+            System.out.println("here2");
             user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+            System.out.println("here3");
             userRepository.save(user);
+            System.out.println("here4");
             logger.info(logEvents[CREATE_USER_SUCCESS.ordinal()]);
             return ResponseEntity.ok(user);
         } catch (Exception e) {
